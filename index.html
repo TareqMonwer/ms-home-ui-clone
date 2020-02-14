@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="./static/main.css  " />
   </head>
   <body>
+    <!-- Mobile menu btn -->
+    <div class="menu-btn">
+      <i class="fas fa-bars fa-2x"></i>
+    </div>
     <!-- Nav -->
     <div class="container">
       <nav class="navbar">
@@ -167,6 +171,7 @@
       </section>
       <!-- /end of follow -->
     </div>
+    <!-- end of container -->
 
     <!-- Links -->
     <section class="links">
@@ -225,9 +230,11 @@
 
     <!-- Footer -->
     <section class="footer">
-      <div class="links-inner">
+      <div class="footer-inner">
         <div>
-          <i class="fas fa-globe fa-2x"></i>&nbsp; English (United States)
+          <i class="fas fa-globe fa-2x"></i>
+          &nbsp; <span class="desktop-only">English (United States)</span>
+          <span class="mobile-only">En(US)</span>
         </div>
         <ul>
           <li><a href="#">Sitemap</a></li>
@@ -242,5 +249,14 @@
       </div>
     </section>
     <!-- /end of footer -->
+
+    <!-- menu toggle -->
+    <script>
+      const toggler = document.querySelector(".menu-btn");
+      const main_menu = document.querySelector(".main-menu");
+      toggler.addEventListener("click", () => {
+        main_menu.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
